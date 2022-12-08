@@ -33,6 +33,6 @@ Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb
 
 Toggle redshift when using mpv.
 
-`F1` activates / deactivates toggling of redshift on a window-by-window basis.
+`F1` activates / deactivates toggling on a window-by-window basis.
 
 Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66af4e17ea527d08e303eb96145). 
