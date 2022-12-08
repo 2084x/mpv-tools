@@ -19,7 +19,7 @@ Does not minimise window or pause file.
 
 ## copy-paste.lua
 
-A simple script to copy paths from and paste links into mpv.
+Copies paths from and pastes links into mpv.
 
 `y` copies (yanks) path of current file to clipboard.
 
@@ -31,8 +31,17 @@ Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb
 
 ## redshift-toggle.lua
 
-Toggle redshift when using mpv.
+Toggles redshift when using mpv.
 
 `F1` activates / deactivates toggling on a window-by-window basis.
 
 Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66af4e17ea527d08e303eb96145). 
+
+## ytdl.lua
+
+Downloads current video with yt-dlp.
+
+`ctrl+d` starts download.
+
+Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58)
+
