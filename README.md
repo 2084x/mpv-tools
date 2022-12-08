@@ -43,5 +43,5 @@ Downloads current video with yt-dlp.
 
 `ctrl+d` starts download.
 
-Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58)
+Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58).
 
