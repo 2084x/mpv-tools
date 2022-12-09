@@ -76,4 +76,4 @@ function toggle()
     end
 end
 
-mp.add_key_binding("F1", "redshift_toggle", toggle)
+mp.add_key_binding("F1", "redshift-toggle", toggle)
