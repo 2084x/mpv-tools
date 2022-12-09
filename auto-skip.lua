@@ -9,10 +9,10 @@ local opts = {
 
 	-- Chapter title patterns to skip.
 	patterns = {
-		"OP","[Oo]pening$", "^[Oo]pening:", "[Oo]pening [Cc]redits",
-        	"ED","[Ee]nding$", "^[Ee]nding:", "[Ee]nding [Cc]redits",
+		"^OP$","[Oo]pening$", "^[Oo]pening:", "[Oo]pening [Cc]redits",
+        	"^ED$","[Ee]nding$", "^[Ee]nding:", "[Ee]nding [Cc]redits",
         	"[Pp]review$",
-		-- "%[SponsorBlock%]",
+		-- "^%[SponsorBlock%]:",
 	},
 
 }
