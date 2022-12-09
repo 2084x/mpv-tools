@@ -41,16 +41,16 @@ end
 function toggle()
 	if on then
 		mp.unobserve_property(check_chapter)
-		mp.osd_message("Chapter-skip disabled")
+		mp.osd_message("Chapter skipping disabled")
 		on = false
 		return
     	end
 
 	mp.observe_property("chapter-metadata/by-key/title", "string", check_chapter)
-    	mp.osd_message("Chapter-skip enabled")
+    	mp.osd_message("Chapter skipping enabled")
     	on = true
     	return
 end
 
 mp.observe_property("chapter-metadata/by-key/title", "string", check_chapter)
-mp.add_key_binding("F2", "chapter-skip", toggle)
+mp.add_key_binding("F2", "auto-skip", toggle)
