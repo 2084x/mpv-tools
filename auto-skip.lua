@@ -12,6 +12,7 @@ local opts = {
 		"OP","[Oo]pening$", "^[Oo]pening:", "[Oo]pening [Cc]redits",
         	"ED","[Ee]nding$", "^[Ee]nding:", "[Ee]nding [Cc]redits",
         	"[Pp]review$",
+		"%[SponsorBlock%]",
 	},
 
 }
