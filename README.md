@@ -9,6 +9,14 @@ Can optionally ignore file types / directories.
 
 Based on [autoloop](https://github.com/zc62/mpv-scripts/blob/master/autoloop.lua).
 
+## auto-skip.lua
+
+Automatically skips chapters based on their title.
+
+`F2` toggles skipping off / on.
+
+Based on [skipchapters](https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/scripts/avail/skipchapters.lua).
+
 ## blackout-next.lua
 
 An alternative to [blackout](https://github.com/sibwaf/mpv-scripts/blob/master/blackout.lua) / [boss-key](https://github.com/detuur/mpv-scripts/blob/master/boss-key.lua) for `vo=gpu-next`.
