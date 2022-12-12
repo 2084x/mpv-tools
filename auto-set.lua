@@ -20,9 +20,14 @@ read_options(opts)
 local function auto_set()
     	local path = mp.get_property_native("path")
     	local duration = mp.get_property_native("duration")
+    	local looping = mp.get_property_native("loop-file")
 
     	for x,pattern in pairs(opts.ignore) do
         	if path:find(pattern) then
+			if looping then
+        			mp.set_property_native("loop-file", false)
+				print("looping disabled")
+			end
             		return
         	end
     	end
@@ -32,8 +37,6 @@ local function auto_set()
 		print("file paused")
         	return
     	end
-
-    	local looping = mp.get_property_native("loop-file")
 
     	if not looping and duration <= opts.length then
         	mp.set_property_native("loop-file", true)
