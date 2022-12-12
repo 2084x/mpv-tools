@@ -2,9 +2,7 @@
 
 assdraw = require "mp.assdraw"
 
-on = false
-
-function toggle()
+local function toggle()
 	if not on then
 		on = true
 		mp.set_property_native("mute", true)
