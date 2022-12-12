@@ -1,4 +1,4 @@
--- Toggle redshift when using mpv.
+-- Toggles redshift when using mpv.
 -- Assumes that redshift is running.
 
 rs_on = true
