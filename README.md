@@ -30,18 +30,6 @@ Does **not** minimise window or alter pause state.
 
 Based on [quality-menu's](https://github.com/christoph-heinrich/mpv-quality-menu) curtain opacity feature.
 
-## copy-paste.lua
-
-Copies paths from and pastes links into mpv.
-
-`y` copies (yanks) path of current file to clipboard.
-
-`alt+v` appends clipboard contents to playlist.
-
-`ctrl+v` loads clipboard contents.
-
-Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) (copying) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua) (pasting).
-
 ## rs-toggle.lua
 
 Toggles redshift when using mpv.
@@ -50,6 +38,17 @@ Toggles redshift when using mpv.
 
 Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66af4e17ea527d08e303eb96145). 
 
+## yap.lua
+
+Yanks, appends and puts links.
+
+`y` yanks path of current file to clipboard.
+
+`a` appends clipboard contents to playlist.
+
+`p` puts and loads clipboard contents.
+
+Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua).
 ## yt-dl.lua
 
 Downloads current video with yt-dlp.
