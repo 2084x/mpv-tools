@@ -1,7 +1,7 @@
--- Copies paths from and pastes links into mpv.
+-- Yanks, appends and puts links.
 
 local function check_clip(s)
-	if string.find(url, "://") == nil then
+	if string.find(u, "://") == nil then
       		return
    	else
       		-- Trims trailing white space.
@@ -27,42 +27,42 @@ local function get_clip()
       		print("Error(stderr): "..v.stderr)
    	end
 
-   	url = v.stdout
+   	u = v.stdout
 
-   	if not url then
+   	if not u then
       		mp.osd_message("Clipboard empty")
       		return
    	end
 
-   	url = check_clip(url)
+   	u = check_clip(u)
 
-   	if not url then
+   	if not u then
       		mp.osd_message("Not a valid link")
       		return
    	else
-      		return url
+      		return u
    	end
 end
 
-local function append_link()
-   	local url = get_clip()
+local function append()
+   	local u = get_clip()
 
-   	if not url then return end
+   	if not u then return end
 
-      	mp.osd_message("Added to playlist: "..url)
-      	mp.commandv("loadfile", url, "append")
+      	mp.osd_message("Added to playlist: "..u)
+      	mp.commandv("loadfile", u, "append")
 end
 
-local function load_link()
-   	local url = get_clip()
+local function put()
+   	local u = get_clip()
 
-   	if not url then return end
+   	if not u then return end
 
-      	mp.osd_message("Opening: "..url)
-      	mp.commandv("loadfile", url, "replace")
+      	mp.osd_message("Opening: "..u)
+      	mp.commandv("loadfile", u, "replace")
 end
 
-local function copy_path()
+local function yank()
    	local p = mp.get_property("path")
    	local c = io.popen("xclip -i -selection clipboard", "w")
    	c:write(p)
@@ -70,6 +70,6 @@ local function copy_path()
    	mp.osd_message("Copied to clipboard: "..p)
 end
 
-mp.add_key_binding("y", copy_path)
-mp.add_key_binding("alt+v", append_link)
-mp.add_key_binding("ctrl+v", load_link)
+mp.add_key_binding("y", yank)
+mp.add_key_binding("a", append)
+mp.add_key_binding("p", put)
