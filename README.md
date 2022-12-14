@@ -42,11 +42,11 @@ Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66a
 
 Yanks, appends and puts links.
 
-`y` yanks path of current file to clipboard.
+`y` yanks (copies) path of current file to clipboard.
 
 `a` appends clipboard contents to playlist.
 
-`p` puts and loads clipboard contents.
+`p` puts (pastes) and loads clipboard contents.
 
 Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua).
 ## yt-dl.lua
