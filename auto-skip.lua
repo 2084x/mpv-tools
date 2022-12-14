@@ -1,7 +1,5 @@
 -- Automatically skips chapters based on their title.
 
-require 'mp.options'
-
 local opts = {
 
 	-- If false, shows osd message when chapter is skipped.
@@ -16,8 +14,6 @@ local opts = {
 	},
 
 }
-
-read_options(opts)
 
 on = true
 
