@@ -1,6 +1,6 @@
 -- Blackout / boss key for vo=gpu-next.
 
-assdraw = require "mp.assdraw"
+local assdraw = require "mp.assdraw"
 
 local function toggle()
 	if not on then
