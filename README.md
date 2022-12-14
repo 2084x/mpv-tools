@@ -1,12 +1,14 @@
 # mpv-tools
 
-Various scripts for mpv.
+Various scripts for mpv. 
+
+Options (if available) can be configured at the beginning of each script. 
+
+Keybinds can be changed at the end of each script.
 
 ## auto-set.lua
 
 Automatically sets `loop-file=inf` if duration <= given length or `pause` if path has no duration (image file).
-
-Can optionally ignore file types / directories.
 
 Based on [autoloop](https://github.com/zc62/mpv-scripts/blob/master/autoloop.lua).
 
@@ -24,7 +26,9 @@ An alternative to [blackout](https://github.com/sibwaf/mpv-scripts/blob/master/b
 
 `b` toggles blackout.
 
-Does not minimise window or pause file.
+Does **not** minimise window or alter pause state.
+
+Based on [quality-menu's](https://github.com/christoph-heinrich/mpv-quality-menu) curtain opacity feature.
 
 ## copy-paste.lua
 
