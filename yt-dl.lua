@@ -26,9 +26,8 @@ local function dl()
 	end
 
    	local p = mp.get_property("path")
-   	local l = string.format(p)
 
-   	if string.find(l, "://") == nil then
+   	if string.find(p, "://") == nil then
 		mp.osd_message("[yt-dl] cannot download local files")
 		return
 	end
@@ -41,7 +40,7 @@ local function dl()
 	mp.command_native_async({
 		name="subprocess",
 	-- Additional flags can be placed here or in ~/.config/yt-dlp/config.
-		args = {"yt-dlp", l},
+		args = {"yt-dlp", p},
 		playback_only = false
 		}, function() end)
 end
