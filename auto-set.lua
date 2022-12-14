@@ -1,8 +1,6 @@
 -- Automatically sets loop-file=inf if duration <= given length
 -- or pause if path has no duration (image file).
 
-require "mp.options"
-
 local opts = {
 
 	-- Maximum duration of files to auto-loop.
@@ -14,8 +12,6 @@ local opts = {
 		},
 
 }
-
-read_options(opts)
 
 local function auto_set()
     	local path = mp.get_property_native("path")
