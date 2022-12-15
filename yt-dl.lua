@@ -10,7 +10,7 @@ local function log(event)
 	elseif exists then
 		mp.osd_message("[yt-dl] already downloaded")
 	elseif failed then
-		mp.osd_message("[yt-dl] download experienced errors, check log for details", 3)
+		mp.osd_message("[yt-dl] download experienced errors, check log for details")
 	end
 
 	if success or exists or failed then
