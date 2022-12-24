@@ -16,7 +16,7 @@ Based on [autoloop](https://github.com/zc62/mpv-scripts/blob/master/autoloop.lua
 
 Automatically skips chapters based on their title.
 
-`F2` toggles skipping off / on.
+<kbd>F2</kbd> toggles skipping off / on.
 
 Based on [skipchapters](https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/scripts/avail/skipchapters.lua).
 
@@ -24,7 +24,7 @@ Based on [skipchapters](https://github.com/haasn/gentoo-conf/blob/xor/home/nand/
 
 An alternative to [blackout](https://github.com/sibwaf/mpv-scripts/blob/master/blackout.lua) / [boss-key](https://github.com/detuur/mpv-scripts/blob/master/boss-key.lua) for `vo=gpu-next`.
 
-`b` toggles blackout.
+<kbd>b</kbd> toggles blackout.
 
 Does **not** minimise window or alter pause state.
 
@@ -34,7 +34,7 @@ Based on [quality-menu's](https://github.com/christoph-heinrich/mpv-quality-menu
 
 Toggles redshift when using mpv.
 
-`F1` activates / deactivates toggling on a window-by-window basis.
+<kbd>F1</kbd> activates / deactivates toggling on a window-by-window basis.
 
 Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66af4e17ea527d08e303eb96145). 
 
@@ -42,18 +42,17 @@ Based on [toggle-redshift-on-play](https://gist.github.com/CreamyCookie/d036b66a
 
 Yanks, appends and puts links.
 
-`y` yanks (copies) path of current file to clipboard.
+<kbd>y</kbd> yanks (copies) path of current file to clipboard.
 
-`a` appends clipboard contents to playlist.
+<kbd>a</kbd> appends clipboard contents to playlist.
 
-`p` puts (pastes) and loads clipboard contents.
+<kbd>p</kbd> puts (pastes) and loads clipboard contents.
 
 Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua).
 ## yt-dl.lua
 
 Downloads current video with yt-dlp.
 
-`D` starts download.
+<kbd>D</kbd> starts download.
 
 Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58).
-
