@@ -9,6 +9,7 @@ local opts = {
     	-- Ignore script if string matches path.
     	ignore = {
         	"://",
+		".mp3$", ".flac$", ".wav$", ".m4a$", ".opus$",
 		},
 
 }
