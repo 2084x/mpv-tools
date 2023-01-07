@@ -1,7 +1,6 @@
 -- Automatically skips chapters based on their title.
 
 local opts = {
-
 	-- If false, shows osd message when chapter is skipped.
 	silent = true,
 
@@ -12,7 +11,6 @@ local opts = {
         	"[Pp]review$",
 		"^%[SponsorBlock%]",
 	},
-
 }
 
 on = true
@@ -48,4 +46,4 @@ function toggle()
 end
 
 mp.observe_property("chapter-metadata/by-key/title", "string", check_chapter)
-mp.add_key_binding("F2", "auto-skip", toggle)
+mp.add_key_binding("F1", "auto-skip", toggle)
