@@ -1,10 +1,10 @@
--- Yanks, appends and puts links.
+-- Yanks, appends and puts paths / links.
 
-local function check_clip(s)
-	if string.find(u, "://") == nil then
-      		return
-   	else
+local function check_clip(s, e)
+	if string.find(u, "://") ~= nil then
       		return (s:gsub("^%s*(%S+)%s*", "%1"))
+	elseif string.find(u, "/home/") ~= nil then
+		return string.gsub(s, e, '\\'..e)
    	end
 end
 
@@ -13,49 +13,35 @@ local function get_clip()
    	name = "subprocess",
    	args = { "xclip", "-o","-selection","clipboard"},
    	playback_only = false,
-   	capture_stdout = true,
-   	capture_stderr = true
-			}
+   	capture_stdout = true
+		}
 
    	v = mp.command_native(subprocess)
-
-   	if v.status < 0 then
-      		mp.osd_message("Failed getting clipboard data")
-      		print("Error(string): "..v.error_string)
-      		print("Error(stderr): "..v.stderr)
-   	end
-
    	u = v.stdout
 
    	if not u then
-      		mp.osd_message("Clipboard empty")
-      		return
+      		return mp.osd_message("Clipboard empty")
    	end
 
-   	u = check_clip(u)
+   	c = check_clip(u, '"')
 
-   	if not u then
-      		mp.osd_message("Not a valid link")
-      		return
-   	else
-      		return u
+   	if not c then
+      		return mp.osd_message("Not a valid link")
    	end
+
+      	return c
 end
 
 local function append()
-   	local u = get_clip()
-
-   	if not u then return end
-
+   	local p = get_clip()
+   	if not p then return end
       	mp.osd_message("Added to playlist: "..u)
       	mp.commandv("loadfile", u, "append")
 end
 
 local function put()
-   	local u = get_clip()
-
-   	if not u then return end
-
+   	local p = get_clip()
+   	if not p then return end
       	mp.osd_message("Opening: "..u)
       	mp.commandv("loadfile", u, "replace")
 end
