@@ -39,10 +39,9 @@ local function dl()
 
 	mp.command_native_async({
 		name="subprocess",
-	-- Additional flags can be placed here or in ~/.config/yt-dlp/config.
 		args = {"yt-dlp", p},
 		playback_only = false
 		}, function() end)
 end
 
-mp.add_key_binding("D", "yt-dl", dl)
+mp.add_key_binding("d", "yt-dl", dl)
