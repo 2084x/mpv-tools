@@ -6,7 +6,7 @@ Options (if available) can be configured at the beginning of each script.
 
 Keybinds can be changed at the end of each script.
 
-## bo-next.lua
+## bo.lua
 
 An alternative to [blackout](https://github.com/sibwaf/mpv-scripts/blob/master/blackout.lua) / [boss-key](https://github.com/detuur/mpv-scripts/blob/master/boss-key.lua) for `vo=gpu-next`.
 
@@ -15,6 +15,14 @@ An alternative to [blackout](https://github.com/sibwaf/mpv-scripts/blob/master/b
 Does **not** minimise window or alter pause state.
 
 Based on [quality-menu's](https://github.com/christoph-heinrich/mpv-quality-menu) curtain opacity feature.
+
+## dl.lua
+
+Downloads current video with yt-dlp.
+
+<kbd>d</kbd> starts download.
+
+Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58).
 
 ## rs.lua
 
@@ -49,10 +57,3 @@ Yanks, appends and puts links.
 <kbd>P</kbd> puts (pastes) and loads clipboard contents.
 
 Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua).
-## yt-dl.lua
-
-Downloads current video with yt-dlp.
-
-<kbd>d</kbd> starts download.
-
-Based on [ytdl-preload](https://gist.github.com/bitingsock/17d90e3deeb35b5f75e55adb19098f58).
