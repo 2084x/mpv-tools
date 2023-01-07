@@ -4,13 +4,11 @@ local function check_clip(s)
 	if string.find(u, "://") == nil then
       		return
    	else
-      		-- Trims trailing white space.
       		return (s:gsub("^%s*(%S+)%s*", "%1"))
    	end
 end
 
 local function get_clip()
-
 	subprocess = {
    	name = "subprocess",
    	args = { "xclip", "-o","-selection","clipboard"},
