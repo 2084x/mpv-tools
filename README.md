@@ -48,7 +48,7 @@ Based on [skipchapters](https://github.com/haasn/gentoo-conf/blob/xor/home/nand/
 
 ## yap.lua
 
-Yanks, appends and puts links.
+Yanks, appends and puts paths / links.
 
 <kbd>y</kbd> yanks (copies) path of current file to clipboard.
 
