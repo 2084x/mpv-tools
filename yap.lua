@@ -72,4 +72,4 @@ end
 
 mp.add_key_binding("y", yank)
 mp.add_key_binding("a", append)
-mp.add_key_binding("p", put)
+mp.add_key_binding("P", put)
