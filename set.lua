@@ -2,7 +2,6 @@
 -- or pause if path has no duration (image file).
 
 local opts = {
-
 	-- Maximum duration of files to auto-loop.
     	length = 20,
 
@@ -11,10 +10,9 @@ local opts = {
         	"://",
 		".mp3$", ".flac$", ".wav$", ".m4a$", ".opus$",
 		},
-
 }
 
-local function auto_set()
+local function set()
     	local path = mp.get_property_native("path")
     	local duration = mp.get_property_native("duration")
     	local looping = mp.get_property_native("loop-file")
@@ -44,4 +42,4 @@ local function auto_set()
     	end
 end
 
-mp.register_event("file-loaded", auto_set)
+mp.register_event("file-loaded", set)
