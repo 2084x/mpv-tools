@@ -54,6 +54,6 @@ Yanks, appends and puts paths / links.
 
 <kbd>a</kbd> appends clipboard contents to playlist.
 
-<kbd>P</kbd> puts (pastes) and loads clipboard contents.
+<kbd>P</kbd> puts (pastes) and plays clipboard contents.
 
 Based on [copy-permalink](https://gist.github.com/olejorgenb/a5194d9bc183dbe0bfb02aac18fe37f9) and [copy-paste-url](https://github.com/yassin-l/copy-paste-url/blob/master/copy-paste-url.lua).
