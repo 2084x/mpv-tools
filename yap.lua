@@ -18,16 +18,9 @@ local function get_clip()
 
    	v = mp.command_native(subprocess)
    	u = v.stdout
-
-   	if not u then
-      		return mp.osd_message("Clipboard empty")
-   	end
-
    	c = check_clip(u, '"')
 
-   	if not c then
-      		return mp.osd_message("Not a valid link")
-   	end
+   	if not c then return end
 
       	return c
 end
@@ -35,15 +28,17 @@ end
 local function append()
    	local p = get_clip()
    	if not p then return end
-      	mp.osd_message("Added to playlist: "..u)
-      	mp.commandv("loadfile", u, "append")
+      	mp.osd_message("Appended: "..p)
+      	mp.commandv("loadfile", p, "append")
 end
 
 local function put()
    	local p = get_clip()
    	if not p then return end
-      	mp.osd_message("Opening: "..u)
-      	mp.commandv("loadfile", u, "replace")
+      	mp.osd_message("Playing: "..p)
+      	mp.commandv("loadfile", p, "append")
+        mp.commandv("playlist-move", mp.get_property("playlist-count")-1, mp.get_property("playlist-pos-1"))
+  	mp.commandv("playlist-next")
 end
 
 local function yank()
@@ -51,7 +46,7 @@ local function yank()
    	local c = io.popen("xclip -i -selection clipboard", "w")
    	c:write(p)
    	c:close()
-   	mp.osd_message("Copied to clipboard: "..p)
+   	mp.osd_message("Yanked: "..p)
 end
 
 mp.add_key_binding("y", yank)
